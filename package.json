@@ -1,0 +1,31 @@
+{
+  "name": "door-controller",
+  "version": "0.0.1",
+  "description": "Controls the Entry door",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/tierklinik-dobersberg/door-controller.git"
+  },
+  "author": "Patrick Pacher",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/onoff": "^3.2.1",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "@jsmon/cli": "0.0.1",
+    "@jsmon/core": "0.0.1",
+    "@jsmon/net": "0.0.2",
+    "mqtt": "^2.18.8",
+    "onoff": "^3.2.2",
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3"
+  }
+}

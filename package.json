@@ -4,7 +4,10 @@
   "description": "Controls the Entry door",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "prestart": "rm -r dist ; tsc",
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "test": "jest --verbose --silent"
   },
   "repository": {
     "type": "git",
@@ -14,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.12",
     "@types/onoff": "^3.2.1",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5",
@@ -25,7 +29,28 @@
     "@jsmon/net": "0.0.2",
     "mqtt": "^2.18.8",
     "onoff": "^3.2.2",
+    "reflect-metadata": "^0.1.12",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "json",
+      "html"
+    ]
   }
 }

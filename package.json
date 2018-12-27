@@ -26,7 +26,7 @@
   "dependencies": {
     "@jsmon/cli": "0.0.1",
     "@jsmon/core": "0.0.1",
-    "@jsmon/net": "0.0.2",
+    "@jsmon/net": "0.0.4",
     "mqtt": "^2.18.8",
     "onoff": "^3.2.2",
     "reflect-metadata": "^0.1.12",
